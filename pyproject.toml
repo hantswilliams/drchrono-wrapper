@@ -1,0 +1,37 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drchrono-wrapper"
+version = "0.0.1"
+description = "a python wrapper for the DrChrono API"
+readme = "README.md"
+authors = [{ name = "Hants Williams", email = "hantsawilliams@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["drchrono", "API", "warpper"]
+
+dependencies = [
+    "requests",
+    "python-dotenv",
+    "faker",
+    "requests"
+]
+
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/hantswilliams/drchrono-wrapper"
+
+[project.scripts]
+realpython = "reader.__main__:main"
