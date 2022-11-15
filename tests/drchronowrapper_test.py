@@ -1,4 +1,9 @@
-import src.drchrono as drc
+import os
+
+cwd = os.getcwd()
+os.chdir(cwd + '/src')
+
+import drchrono as drc
 
 #############################################
 

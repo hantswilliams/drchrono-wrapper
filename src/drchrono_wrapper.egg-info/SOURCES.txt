@@ -1,5 +1,4 @@
 README.md
-pyproject.toml
 setup.cfg
 setup.py
 src/drchrono/__init__.py

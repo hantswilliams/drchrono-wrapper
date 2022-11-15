@@ -1,7 +1,8 @@
-from src.drchrono.fake_create.fake_admin_users import userlist_fake
-from src.drchrono.fake_create.fake_admin_doctors import doctorlist_fake
-from src.drchrono.fake_create.fake_clinical_patients import patientlist_fake
-from src.drchrono.fake_create.fake_clinical_appointments import appointment_list_fake
+from .fake_create.fake_admin_doctors import *
+from .fake_create.fake_admin_users import *
+from .fake_create.fake_clinical_appointments import *
+from .fake_create.fake_clinical_patients import *
+
 
 class FAKER(object):
 
