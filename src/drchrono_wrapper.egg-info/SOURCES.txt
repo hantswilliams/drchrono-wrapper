@@ -5,6 +5,7 @@ src/drchrono/__init__.py
 src/drchrono/admin_doctors.py
 src/drchrono/admin_users.py
 src/drchrono/clinical_appointments.py
+src/drchrono/clinical_documents.py
 src/drchrono/clinical_medications.py
 src/drchrono/clinical_patients.py
 src/drchrono/fake_data.py
