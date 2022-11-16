@@ -29,6 +29,7 @@ session.headers['Authorization'] = 'Bearer %s' % API_TOKEN
 from .admin_doctors import DOCTORS
 from .admin_users import USERS 
 from .clinical_appointments import APPOINTMENTS
+from .clinical_documents import DOCUMENTS
 from .clinical_medications import MEDICATIONS
 from .clinical_patients import PATIENTS
 from .fake_data import FAKER
