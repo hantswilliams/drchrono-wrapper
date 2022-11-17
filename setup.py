@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='drchrono-wrapper',
+    name='drchrono',
     version='0.0.5',
     license='MIT',
     author="Hants Williams",
