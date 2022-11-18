@@ -22,7 +22,7 @@ f_document = {  'date': '2017-01-01',
 
 for key, value in f_document.items():
     pdf.cell(200, 10, txt=key + ': ' + value, ln=1, align='L')
-pdf.output("myfile.pdf")
+pdf.output("new_test_myfile.pdf")
 
 files = {'document': open('myfile.pdf', 'rb')}
 

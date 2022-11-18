@@ -6,8 +6,6 @@ import drchrono as drc
 from dotenv import load_dotenv
 load_dotenv()
 
-
-
 #############################################
 
 ### Create fake datasets 
