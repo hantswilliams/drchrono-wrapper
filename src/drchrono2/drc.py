@@ -1,6 +1,7 @@
 
-from .constants import *
+from . import constants
 from .patients import patient_manager
+from .utils import config as cfg
 
 class drc:
 
@@ -16,6 +17,11 @@ class drc:
     def __init__(self, api_key, config=None):
         assert api_key is not None, 'API Key must be set'
         self.api_key = api_key
+        if config is None:
+            self.config = cfg.get_default_config()
+        else:
+            assert isinstance(config, dict)
+            self.config = config
 
 
     @property
@@ -28,8 +34,8 @@ class drc:
 
     def patient_manager(self):
         """
-        Gives a `pyowm.agro10.agro_manager.AgroManager` instance that can be used to read/write data from the
-        Agricultural API.
-        :return: a `pyowm.agro10.agro_manager.AgroManager` instance
+        Gives a `drc.patients.patient_manager` instance that can be used to read/write data from the
+        patient API.
+        :return: a `drc.patients.patient_manager` instance
         """
-        return patient_manager.PatientManager(self.api_key)
+        return patient_manager.PatientManager(self.api_key, self.config)

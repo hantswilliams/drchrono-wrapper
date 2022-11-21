@@ -12,21 +12,22 @@ class PatientManager:
     
     """
 
-    def __init__(self, API_key):
+    def __init__(self, API_key, config):
         assert isinstance(API_key, str), 'You must provide a valid API Key'
         self.API_key = API_key
-        self.http_client = HttpClient(API_key, ROOT_PATIENT_API)
+        assert isinstance(config, dict)
+        self.http_client = HttpClient(API_key, config, ROOT_PATIENT_API)
 
-    def get_patients(self):
+    def get_all(self):
         """
         Retrieves all of the patients based on permissions for logged in user.
         :returns: json 
         """
 
         status, data = self.http_client.get_json(
-            ROOT_PATIENT_API,
-            params={'appid': self.API_key},
-            headers={'Content-Type': 'application/json'})
+            path='/',
+            headers={'Content-Type': 'application/json', 'Authorization': 'Bearer ' + self.API_key})
             
         return {'status': status, 'data': data}
+
 

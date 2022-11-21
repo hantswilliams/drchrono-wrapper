@@ -1,1 +1,2 @@
-ROOT_PATIENT_API = 'https://drchrono.com/api/patient'
+ROOT_API = 'drchrono.com/api'
+ROOT_PATIENT_API = ROOT_API + '/patients'
