@@ -26,6 +26,7 @@
         - Patients 
         - Appointments 
         - Medications 
+        - Documents
 
 ## admin: 
 - To create to version: 

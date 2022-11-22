@@ -2,7 +2,7 @@ import os
 cwd = os.getcwd()
 os.chdir(cwd + '/src')
 
-import drchrono as drc
+import drchrono_old as drc
 from dotenv import load_dotenv
 load_dotenv()
 
