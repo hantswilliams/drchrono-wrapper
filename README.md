@@ -1,7 +1,7 @@
 # drchrono-wrapper
 
 ## API token requirement
-- please visit for more information on how to generate:  
+- please visit for more information on how to generate: https://app.drchrono.com/api-docs/#section/Authorization 
 - first load in the package and set the API token: 
     - `from drchrono import drc` 
     - load in API token from .env: 
