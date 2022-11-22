@@ -6,7 +6,7 @@ load_dotenv()
 import os
 cwd = os.getcwd()
 os.chdir(cwd + '/src')
-import drchrono as drc
+import drchrono_old as drc
 
 # pdf settings
 pdf = fpdf.FPDF(format='letter')
