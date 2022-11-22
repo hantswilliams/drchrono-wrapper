@@ -3,7 +3,7 @@
 ## API token requirement
 - please visit for more information on how to generate: https://app.drchrono.com/api-docs/#section/Authorization 
 - first load in the package and set the API token: 
-    - `from drchrono import drc` 
+    - `from drchrono.drc import drc` 
     - load in API token from .env: 
         - `drc_client = drc(api_key=os.getenv('DRCHRONO_API_TOKEN'))`
     - type in API token manually (not recommended):
