@@ -1,6 +1,6 @@
 import requests
 
-class USERS(object):
+class USERS():
 
     def __init__(self, api_key, user_id=None, group_id=None, fake_count=1):
         self.user_id = user_id
@@ -31,21 +31,19 @@ class USERS(object):
             path = data_json['next']
         return list_response
 
-    @classmethod
-    def user_single(cls, api_key, user_id):
+    def user_single(self, user_id):
         path = 'https://app.drchrono.com/api/users/{}'.format(user_id)
         try: 
-            data = requests.get(path, headers={'Authorization': 'Bearer ' + api_key})
+            data = requests.get(path, headers={'Authorization': 'Bearer ' + self.api_key})
             data_json = data.json()
             return data_json
         except Exception as e:
             print(e)
 
-    @classmethod
-    def usergrouplist_single(cls, api_key, group_id):
+    def usergrouplist_single(self, group_id):
         path = 'https://app.drchrono.com/api/user_groups/{}'.format(group_id)
         try: 
-            data = requests.get(path, headers={'Authorization': 'Bearer ' + api_key})
+            data = requests.get(path, headers={'Authorization': 'Bearer ' + self.api_key})
             data_json = data.json()
             return data_json
         except Exception as e:

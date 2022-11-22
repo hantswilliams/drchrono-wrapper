@@ -1,6 +1,6 @@
 import requests
 
-class MEDICATIONS(object):
+class MEDICATIONS():
 
     def __init__(self, api_key, patient_id=None, medication_id=None, **kwargs):
         self.patient_id = patient_id
@@ -19,21 +19,19 @@ class MEDICATIONS(object):
             path = data_json['next']
         return list_response
 
-    @classmethod
-    def medication_patient(cls, api_key, patient_id):
+    def medication_patient(self, patient_id):
         path = "https://app.drchrono.com/api/medications?patient=" + patient_id 
         try: 
-            data = requests.get(path, headers={'Authorization': 'Bearer ' + api_key})
+            data = requests.get(path, headers={'Authorization': 'Bearer ' + self.api_key})
             data_json = data.json()
             return data_json
         except Exception as e:
             print(e)
 
-    @classmethod
-    def medication_single(cls, api_key, medication_id):
+    def medication_single(self, medication_id):
         path = 'https://app.drchrono.com/api/medications/{}'.format(medication_id)
         try: 
-            data = requests.get(path, headers={'Authorization': 'Bearer ' + api_key})
+            data = requests.get(path, headers={'Authorization': 'Bearer ' + self.api_key})
             data_json = data.json()
             return data_json
         except Exception as e:

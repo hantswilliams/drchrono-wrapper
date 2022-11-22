@@ -1,6 +1,6 @@
 import requests 
 
-class DOCUMENTS(object):
+class DOCUMENTS():
 
     def __init__(self, api_key, date=None, description=None, doctor=None, document=None, patient=None, archieved=None, metatags=None):
         self.date = date
@@ -13,14 +13,13 @@ class DOCUMENTS(object):
         assert isinstance(api_key, str), 'You must provide a valid API Key'
         self.api_key = api_key
 
-    @classmethod
-    def create_document(cls, api_key, date, description, doctor, document, patient, metatags):
+    def create_document(self, date, description, doctor, document, patient, metatags):
         """
             Create a document
         """
         path = 'https://drchrono.com/api/documents'
         data = {
-            'date': date,
+            'date':date,
             'description': description,
             'doctor': doctor,
             'patient': patient,
@@ -28,7 +27,7 @@ class DOCUMENTS(object):
         }
         file=document
         try:
-            data = requests.post(path, data, files=file, headers={'Authorization': 'Bearer ' + api_key})
+            data = requests.post(path, data, files=file, headers={'Authorization': 'Bearer ' + self.api_key})
             data_json = data.json()
             return data_json
 
