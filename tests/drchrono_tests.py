@@ -26,7 +26,7 @@ f_users, f_doctors, f_patients, f_appointments = drc.faker().generate(20, 40, 15
 patient_all = drc_client.patients().patientlist
 patient_single = drc_client.patients().patient_single(patient_id='104612001')
 doctor_list = drc_client.doctors().doctorlist
-appointments = drc_client.appointments().appointment_list(appointment_startdate='2019-01-01')
+appointments = drc_client.appointments().appointment_list(appointment_startdate="2019-01-01")
 
 #### fake doc create 
 #### fake doc create 
@@ -66,10 +66,6 @@ drc_client.documents().create_document(date='2017-01-01', description='testdocum
 #######################
 #######################
 #######################
-
-
-
-
 
 
 

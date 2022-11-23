@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='drchrono',
-    version='0.0.8',
+    version='0.0.9',
     license='MIT',
     author="Hants Williams",
     author_email='hantsawilliams@gmail.com',
