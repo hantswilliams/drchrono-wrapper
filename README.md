@@ -1,5 +1,9 @@
 # drchrono-wrapper
 
+## Requirements 
+- checkout the requirements.txt file 
+- min. python version: 3.10 because of switch statement utilization that is only available starting with python 3.10
+
 ## API token requirement
 - please visit for more information on how to generate: https://app.drchrono.com/api-docs/#section/Authorization 
 - first load in the package and set the API token: 
